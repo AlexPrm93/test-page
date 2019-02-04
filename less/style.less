@@ -1,0 +1,139 @@
+// out: ../css/style.css
+
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+	line-height: 1.4em;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+.container {
+	flex-grow: 1;
+}
+
+.main-header {
+	width: 100%;
+	background-color: lightgreen;
+	.wrapper {
+		max-width: 980px;
+		margin: 0 auto;
+		ul {
+			list-style: none;
+			text-transform: uppercase;
+			text-align: center;
+			li {
+				display: inline-block;
+				border-right: 1px solid #fff;
+				transition: all 0.3s linear;
+				a {
+					position: relative;
+					display: block;
+					padding: 10px;
+					padding-left: 20px;
+					text-decoration: none;
+					color: #ffffff;
+					font-size: 14px;
+					font-weight: bold;
+					.fa {
+						margin-right: 10px;
+					}
+				}
+				&:last-child {
+					border-right: none;
+				}
+				&:hover {
+					background-color: rgba(0, 0, 0, 0.1);
+				}
+			}
+		}
+	}
+}
+.main-content {
+	.image-box {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: auto;
+		height: 500px;
+		.main-banner {
+			height: 100%;
+		}
+	}
+	.wrapper {
+		max-width: 1280px;
+		margin: 30px auto;
+		.info-block {
+			display: flex;
+			.sidebar {
+				min-width: 200px;
+				min-height: 200px;
+				border: 3px solid #ccc;
+				border-radius: 10px;
+				h2 {
+					padding: 15px;
+					font-size: 17px;
+					font-weight: 1000;
+				}
+				p {
+					padding: 15px;
+				}
+			}
+			.info {
+				flex-grow: 1;
+				height: auto;
+				margin: 0 30px;
+				background-color: #fff;
+				h2 {
+					padding: 15px;
+					font-size: 25px;
+					font-weight: 1000;
+				}
+				p {
+					padding: 15px;
+				}
+			}
+		}
+	}	
+}
+.main-footer {
+	color: #fff;
+	background-color: #4F5877;
+	.wrapper {
+		display: flex;
+		max-width: 1280px;
+		margin: 0 auto;
+		.content-box {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			width: 33.333333%;
+			margin: 0 15px;
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+			p {
+				margin: 10px 0;
+			}
+		}
+	}
+}
+@media (max-width: 1280px) {
+	.main-footer {
+		.wrapper {
+			.content-box {
+				&:first-child {
+					margin-left: 15px;
+				}
+				&:last-child {
+					margin-right: 15px;
+				}
+			}
+		}
+	}
+}
+
